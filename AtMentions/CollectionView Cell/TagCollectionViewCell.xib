@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="redraw" reuseIdentifier="TagCell" id="2" customClass="TagCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="81" height="28"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="81" height="28"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="abc" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3">
+                        <rect key="frame" x="1" y="3" width="62" height="24"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="10" id="24"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k5X-xn-jdB">
+                        <rect key="frame" x="77" y="8" width="1" height="14"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GeC-Ov-7SY">
+                        <rect key="frame" x="7" y="-2" width="62" height="24"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <state key="normal">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="userNamePressed:" destination="2" eventType="touchUpInside" id="aF5-Qt-Kas"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="3" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="1" id="14"/>
+                <constraint firstAttribute="trailing" secondItem="3" secondAttribute="trailing" constant="18" id="15"/>
+                <constraint firstItem="3" firstAttribute="top" secondItem="2" secondAttribute="top" constant="3" id="16"/>
+                <constraint firstAttribute="bottom" secondItem="3" secondAttribute="bottom" constant="1" id="17"/>
+                <constraint firstAttribute="trailing" secondItem="GeC-Ov-7SY" secondAttribute="trailing" constant="12" id="8Bf-C6-gpR"/>
+                <constraint firstItem="k5X-xn-jdB" firstAttribute="leading" secondItem="3" secondAttribute="trailing" constant="14" id="Urs-Dz-g8s"/>
+                <constraint firstItem="GeC-Ov-7SY" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="7" id="eSZ-cz-Ofw"/>
+                <constraint firstAttribute="bottom" secondItem="GeC-Ov-7SY" secondAttribute="bottom" constant="6" id="eiA-V0-7OT"/>
+                <constraint firstAttribute="trailing" secondItem="k5X-xn-jdB" secondAttribute="trailing" constant="3" id="hWE-pu-u8H"/>
+                <constraint firstAttribute="bottom" secondItem="k5X-xn-jdB" secondAttribute="bottom" constant="6" id="hwg-r1-srK"/>
+                <constraint firstItem="k5X-xn-jdB" firstAttribute="top" secondItem="2" secondAttribute="top" constant="8" id="jfV-uC-LNv"/>
+                <constraint firstItem="GeC-Ov-7SY" firstAttribute="top" secondItem="2" secondAttribute="top" constant="-2" id="wSa-2A-UzH"/>
+            </constraints>
+            <size key="customSize" width="81" height="28"/>
+            <connections>
+                <outlet property="label" destination="3" id="12"/>
+                <outlet property="separatorView" destination="k5X-xn-jdB" id="KSw-29-rWu"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>

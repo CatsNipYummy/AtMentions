@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Vp0-Rz-OUp">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="44N-wq-t3Y">
+            <objects>
+                <viewController id="Vp0-Rz-OUp" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6lM-jB-JYi"/>
+                        <viewControllerLayoutGuide type="bottom" id="SyM-2q-9zT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eOJ-7V-yQq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="143-0c-Fkt">
+                                <rect key="frame" x="10" y="80" width="300" height="154"/>
+                                <color key="backgroundColor" red="0.66666666669999997" green="0.68235294120000001" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="154" id="96d-2h-2uO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Vp0-Rz-OUp" id="1or-pg-xnM"/>
+                                </connections>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eho-pE-bJ1">
+                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                                <subviews>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hJs-a7-orZ" customClass="CSAnimationView">
+                                        <rect key="frame" x="8" y="0.0" width="312" height="40"/>
+                                        <subviews>
+                                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZUH-rl-tvH">
+                                                <rect key="frame" x="0.0" y="8" width="312" height="44"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="312" id="vrl-Mx-JUa"/>
+                                                    <constraint firstAttribute="height" constant="44" id="yzD-Y1-bDB"/>
+                                                </constraints>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PhW-5E-BqW">
+                                                    <size key="itemSize" width="50" height="50"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="Vp0-Rz-OUp" id="fvO-61-O5o"/>
+                                                    <outlet property="delegate" destination="Vp0-Rz-OUp" id="4Fa-He-xJR"/>
+                                                </connections>
+                                            </collectionView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="ZUH-rl-tvH" firstAttribute="top" secondItem="hJs-a7-orZ" secondAttribute="top" constant="8" id="5Mk-Cq-SaK"/>
+                                            <constraint firstAttribute="bottom" secondItem="ZUH-rl-tvH" secondAttribute="bottom" constant="-12" id="AnY-JE-m5e"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZUH-rl-tvH" secondAttribute="trailing" id="xaw-Vo-qs2"/>
+                                            <constraint firstItem="ZUH-rl-tvH" firstAttribute="leading" secondItem="hJs-a7-orZ" secondAttribute="leading" id="yhF-W9-Uxm"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="type" value="bounceLeft"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="hJs-a7-orZ" firstAttribute="top" secondItem="Eho-pE-bJ1" secondAttribute="top" id="6PX-cf-5d6"/>
+                                    <constraint firstAttribute="width" constant="320" id="B6h-78-5Wa"/>
+                                    <constraint firstAttribute="height" constant="50" id="DpV-lh-aXM"/>
+                                    <constraint firstAttribute="trailing" secondItem="hJs-a7-orZ" secondAttribute="trailing" id="rjQ-WJ-8Js"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Eho-pE-bJ1" firstAttribute="leading" secondItem="eOJ-7V-yQq" secondAttribute="leading" id="3Cq-1p-HxC"/>
+                            <constraint firstItem="Eho-pE-bJ1" firstAttribute="centerX" secondItem="143-0c-Fkt" secondAttribute="centerX" id="4dr-EE-8ae"/>
+                            <constraint firstItem="143-0c-Fkt" firstAttribute="top" secondItem="6lM-jB-JYi" secondAttribute="bottom" constant="60" id="EEh-5B-LGA"/>
+                            <constraint firstItem="143-0c-Fkt" firstAttribute="leading" secondItem="eOJ-7V-yQq" secondAttribute="leading" constant="10" id="kHx-4N-Gsp"/>
+                            <constraint firstAttribute="bottom" secondItem="Eho-pE-bJ1" secondAttribute="bottom" id="uGq-G1-IQG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9pj-HH-xTt"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="bottomView" destination="Eho-pE-bJ1" id="XcY-hV-KAC"/>
+                        <outlet property="collectionView" destination="ZUH-rl-tvH" id="aAO-1v-jlp"/>
+                        <outlet property="collectionViewEmbedView" destination="hJs-a7-orZ" id="a6X-0u-DiS"/>
+                        <outlet property="mainView" destination="eOJ-7V-yQq" id="48z-Gy-B88"/>
+                        <outlet property="textView" destination="143-0c-Fkt" id="VuB-EW-xJb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eKn-AJ-oLN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1224" y="507"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
